@@ -13,6 +13,7 @@
 		23DF01AD224BDA3E00164156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01AB224BDA3E00164156 /* Main.storyboard */; };
 		23DF01AF224BDA4200164156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01AE224BDA4200164156 /* Assets.xcassets */; };
 		23DF01B2224BDA4200164156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01B0224BDA4200164156 /* LaunchScreen.storyboard */; };
+		23DF01BA224BDEC700164156 /* AnimatedUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		23DF01AE224BDA4200164156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23DF01B1224BDA4200164156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23DF01B3224BDA4200164156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedUITabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		23DF01A4224BDA3E00164156 /* PV239 project */ = {
 			isa = PBXGroup;
 			children = (
+				23DF01BB224BDED400164156 /* Controllers */,
 				23DF01A5224BDA3E00164156 /* AppDelegate.swift */,
-				23DF01A7224BDA3E00164156 /* FirstViewController.swift */,
-				23DF01A9224BDA3E00164156 /* SecondViewController.swift */,
 				23DF01AB224BDA3E00164156 /* Main.storyboard */,
 				23DF01AE224BDA4200164156 /* Assets.xcassets */,
 				23DF01B0224BDA4200164156 /* LaunchScreen.storyboard */,
 				23DF01B3224BDA4200164156 /* Info.plist */,
 			);
 			path = "PV239 project";
+			sourceTree = "<group>";
+		};
+		23DF01BB224BDED400164156 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23DF01A7224BDA3E00164156 /* FirstViewController.swift */,
+				23DF01A9224BDA3E00164156 /* SecondViewController.swift */,
+				23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DF01BA224BDEC700164156 /* AnimatedUITabBarController.swift in Sources */,
 				23DF01AA224BDA3E00164156 /* SecondViewController.swift in Sources */,
 				23DF01A6224BDA3E00164156 /* AppDelegate.swift in Sources */,
 				23DF01A8224BDA3E00164156 /* FirstViewController.swift in Sources */,
