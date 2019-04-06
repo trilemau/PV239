@@ -18,18 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYG-Tq-jL8">
-                                <rect key="frame" x="79" y="44" width="217" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYG-Tq-jL8">
+                                <rect key="frame" x="79" y="49" width="217" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-TN-2Ql">
-                                <rect key="frame" x="16" y="44" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-TN-2Ql">
+                                <rect key="frame" x="16" y="51" width="30" height="15"/>
                                 <state key="normal" title="Edit"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-o9-I5u">
-                                <rect key="frame" x="329" y="35" width="30" height="41"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="izN-vG-pWD">
+                                <rect key="frame" x="0.0" y="84" width="375" height="645"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D7j-iu-Vr3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D7j-iu-Vr3" id="qlC-5e-VAS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-o9-I5u">
+                                <rect key="frame" x="330" y="50" width="30" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="+"/>
                             </button>
@@ -40,9 +55,9 @@
                             <constraint firstItem="UYG-Tq-jL8" firstAttribute="top" secondItem="AbU-yH-IgP" secondAttribute="top" id="8Rj-fo-Q4G"/>
                             <constraint firstItem="AbU-yH-IgP" firstAttribute="trailing" secondItem="UYG-Tq-jL8" secondAttribute="trailing" constant="79" id="AfC-Sy-pzA"/>
                             <constraint firstItem="UYG-Tq-jL8" firstAttribute="leading" secondItem="AbU-yH-IgP" secondAttribute="leading" constant="79" id="Az1-h8-Gvc"/>
-                            <constraint firstItem="CYW-TN-2Ql" firstAttribute="leading" secondItem="AbU-yH-IgP" secondAttribute="leading" constant="16" id="YAw-k3-bqF"/>
+                            <constraint firstItem="CYW-TN-2Ql" firstAttribute="leading" secondItem="AbU-yH-IgP" secondAttribute="leading" constant="16" id="Ory-gT-6V7"/>
+                            <constraint firstItem="CYW-TN-2Ql" firstAttribute="top" secondItem="AbU-yH-IgP" secondAttribute="top" id="SPt-9W-AOl"/>
                             <constraint firstItem="8a4-o9-I5u" firstAttribute="top" secondItem="BuA-Rz-wSz" secondAttribute="top" constant="35" id="eNc-dZ-Fe6"/>
-                            <constraint firstItem="CYW-TN-2Ql" firstAttribute="top" secondItem="AbU-yH-IgP" secondAttribute="top" id="i8k-Ms-PaO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AbU-yH-IgP"/>
                     </view>
