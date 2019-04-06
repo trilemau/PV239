@@ -8,5 +8,7 @@ target 'PV239 project' do
   # Pods for PV239 project
 
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 
 end

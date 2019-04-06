@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230407D02258EAE20022705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 230407CF2258EAE20022705D /* GoogleService-Info.plist */; };
 		23DF01A6224BDA3E00164156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A5224BDA3E00164156 /* AppDelegate.swift */; };
 		23DF01A8224BDA3E00164156 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A7224BDA3E00164156 /* FirstViewController.swift */; };
 		23DF01AA224BDA3E00164156 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A9224BDA3E00164156 /* SecondViewController.swift */; };
@@ -18,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		239543812258E2F5002BC8F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		230407CF2258EAE20022705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23DF01A2224BDA3E00164156 /* PV239 project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PV239 project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DF01A5224BDA3E00164156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DF01A7224BDA3E00164156 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,7 @@
 				23DF01AE224BDA4200164156 /* Assets.xcassets */,
 				23DF01B0224BDA4200164156 /* LaunchScreen.storyboard */,
 				23DF01B3224BDA4200164156 /* Info.plist */,
-				239543812258E2F5002BC8F7 /* GoogleService-Info.plist */,
+				230407CF2258EAE20022705D /* GoogleService-Info.plist */,
 			);
 			path = "PV239 project";
 			sourceTree = "<group>";
@@ -165,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23DF01B2224BDA4200164156 /* LaunchScreen.storyboard in Resources */,
+				230407D02258EAE20022705D /* GoogleService-Info.plist in Resources */,
 				23DF01AF224BDA4200164156 /* Assets.xcassets in Resources */,
 				23DF01AD224BDA3E00164156 /* Main.storyboard in Resources */,
 			);
@@ -198,12 +200,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PV239 project/Pods-PV239 project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
