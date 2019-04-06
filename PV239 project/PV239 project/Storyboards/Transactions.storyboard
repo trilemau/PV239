@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eqp-ps-g9a">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transactions-->
+        <scene sceneID="wHB-e3-Jqu">
+            <objects>
+                <viewController id="Eqp-ps-g9a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BuA-Rz-wSz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYG-Tq-jL8">
+                                <rect key="frame" x="79" y="44" width="217" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-TN-2Ql">
+                                <rect key="frame" x="16" y="44" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-o9-I5u">
+                                <rect key="frame" x="329" y="35" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AbU-yH-IgP" firstAttribute="trailing" secondItem="8a4-o9-I5u" secondAttribute="trailing" constant="16" id="2ad-Nn-IXx"/>
+                            <constraint firstItem="UYG-Tq-jL8" firstAttribute="top" secondItem="AbU-yH-IgP" secondAttribute="top" id="8Rj-fo-Q4G"/>
+                            <constraint firstItem="AbU-yH-IgP" firstAttribute="trailing" secondItem="UYG-Tq-jL8" secondAttribute="trailing" constant="79" id="AfC-Sy-pzA"/>
+                            <constraint firstItem="UYG-Tq-jL8" firstAttribute="leading" secondItem="AbU-yH-IgP" secondAttribute="leading" constant="79" id="Az1-h8-Gvc"/>
+                            <constraint firstItem="CYW-TN-2Ql" firstAttribute="leading" secondItem="AbU-yH-IgP" secondAttribute="leading" constant="16" id="YAw-k3-bqF"/>
+                            <constraint firstItem="8a4-o9-I5u" firstAttribute="top" secondItem="BuA-Rz-wSz" secondAttribute="top" constant="35" id="eNc-dZ-Fe6"/>
+                            <constraint firstItem="CYW-TN-2Ql" firstAttribute="top" secondItem="AbU-yH-IgP" secondAttribute="top" id="i8k-Ms-PaO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AbU-yH-IgP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="first" id="Sbe-Ci-5g9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctc-l6-Ef7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="-188.42364532019704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>

@@ -42,7 +42,8 @@ extension AnimatedUITabBarController: UITabBarControllerDelegate  {
         guard let tabViewControllers = tabBarController.viewControllers else { return false }
         guard let toIndex = tabViewControllers.index(of: viewController) else { return false }
         
-        animateToTab(toIndex: toIndex)
+        // Uncomment for animations
+        //animateToTab(toIndex: toIndex)
         return true
     }
     
