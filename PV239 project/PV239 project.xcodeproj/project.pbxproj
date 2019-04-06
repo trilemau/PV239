@@ -18,6 +18,7 @@
 		6C602C832258EA0F00DD81C1 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C602C822258EA0F00DD81C1 /* Transactions.storyboard */; };
 		6C602C852258EB1B00DD81C1 /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C602C842258EB1B00DD81C1 /* Report.storyboard */; };
 		6C602C872258EC0E00DD81C1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C602C862258EC0E00DD81C1 /* Settings.storyboard */; };
+		6C84007F2258FA900029D6AF /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */; };
 		90D36909A1D7E0C1D8F24F96 /* Pods_PV239_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CCCB2CA82F65EDC2203F8C /* Pods_PV239_project.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		6C602C822258EA0F00DD81C1 /* Transactions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transactions.storyboard; sourceTree = "<group>"; };
 		6C602C842258EB1B00DD81C1 /* Report.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
 		6C602C862258EC0E00DD81C1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		D1CCCB2CA82F65EDC2203F8C /* Pods_PV239_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PV239_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				23DF01A7224BDA3E00164156 /* FirstViewController.swift */,
 				23DF01A9224BDA3E00164156 /* SecondViewController.swift */,
 				23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */,
+				6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C84007F2258FA900029D6AF /* TransactionsTableViewController.swift in Sources */,
 				23DF01BA224BDEC700164156 /* AnimatedUITabBarController.swift in Sources */,
 				23DF01AA224BDA3E00164156 /* SecondViewController.swift in Sources */,
 				23DF01A6224BDA3E00164156 /* AppDelegate.swift in Sources */,
