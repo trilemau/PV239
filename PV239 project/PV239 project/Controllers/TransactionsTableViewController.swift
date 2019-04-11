@@ -10,7 +10,11 @@ import UIKit
 
 class TransactionsTableViewController: UITableViewController {
 
-    var transactions: [String] = ["abc", "asd", "asdas"]
+    
+    
+    var transactions: [Transaction] = [
+        Transaction(transactionType: TransactionType.Expense, category: Category.Clothes, amount: 20, date: Date(timeIntervalSince1970: 1554589144))
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +42,7 @@ class TransactionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        cell.textLabel?.text = transactions[indexPath.row]
+        cell.textLabel?.text = transactions[indexPath.row].description
         
         return cell
     }
