@@ -29,13 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         authUI?.providers = providers
         
-//        do {
-//            try authUI?.signOut()
-//        }
-//        catch {
-//            print("Error in logout: \(error)")
-//        }
-        
         return true
     }
 

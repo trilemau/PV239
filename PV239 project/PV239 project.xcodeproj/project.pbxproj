@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		230407D22258F5AF0022705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 230407D12258F5AE0022705D /* GoogleService-Info.plist */; };
+		237FDCB722748DA6002BA893 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDCB622748DA6002BA893 /* SettingsViewController.swift */; };
 		23DF01A6224BDA3E00164156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A5224BDA3E00164156 /* AppDelegate.swift */; };
 		23DF01A8224BDA3E00164156 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A7224BDA3E00164156 /* FirstViewController.swift */; };
 		23DF01AA224BDA3E00164156 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A9224BDA3E00164156 /* SecondViewController.swift */; };
@@ -15,11 +16,11 @@
 		23DF01AF224BDA4200164156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01AE224BDA4200164156 /* Assets.xcassets */; };
 		23DF01B2224BDA4200164156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01B0224BDA4200164156 /* LaunchScreen.storyboard */; };
 		23DF01BA224BDEC700164156 /* AnimatedUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */; };
+		23EE3A31225FA34800F25A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EE3A30225FA34800F25A72 /* Main.storyboard */; };
+		23EE3A33225FA76100F25A72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE3A32225FA76100F25A72 /* LoginViewController.swift */; };
 		6C5559F622593C4300B2D89F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5559F522593C4300B2D89F /* Transaction.swift */; };
 		6C5559F8225945DD00B2D89F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5559F7225945DD00B2D89F /* Category.swift */; };
 		6C5559FA22595A6300B2D89F /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5559F922595A6300B2D89F /* TransactionType.swift */; };
-		23EE3A31225FA34800F25A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EE3A30225FA34800F25A72 /* Main.storyboard */; };
-		23EE3A33225FA76100F25A72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE3A32225FA76100F25A72 /* LoginViewController.swift */; };
 		6C602C832258EA0F00DD81C1 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C602C822258EA0F00DD81C1 /* Transactions.storyboard */; };
 		6C602C852258EB1B00DD81C1 /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C602C842258EB1B00DD81C1 /* Report.storyboard */; };
 		6C602C872258EC0E00DD81C1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C602C862258EC0E00DD81C1 /* Settings.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		230407D12258F5AE0022705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		237FDCB622748DA6002BA893 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		23DF01A2224BDA3E00164156 /* PV239 project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PV239 project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DF01A5224BDA3E00164156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DF01A7224BDA3E00164156 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */,
 				6CD667B8226068BF00D489EC /* TransactionDetailsViewController.swift */,
 				23EE3A32225FA76100F25A72 /* LoginViewController.swift */,
+				237FDCB622748DA6002BA893 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				6C5559FA22595A6300B2D89F /* TransactionType.swift in Sources */,
 				6CD667B9226068BF00D489EC /* TransactionDetailsViewController.swift in Sources */,
+				237FDCB722748DA6002BA893 /* SettingsViewController.swift in Sources */,
 				23EE3A33225FA76100F25A72 /* LoginViewController.swift in Sources */,
 				6C84007F2258FA900029D6AF /* TransactionsTableViewController.swift in Sources */,
 				6C5559F8225945DD00B2D89F /* Category.swift in Sources */,
