@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="9Ds-sr-Zer" kind="show" id="X8Q-f7-ReB"/>
+                        <segue destination="9Ds-sr-Zer" kind="relationship" relationship="rootViewController" id="bBA-YR-Cnc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKE-UZ-QUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -41,6 +41,7 @@
                                     <color key="titleColor" red="1" green="0.22497355192281898" blue="0.16240626834450977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="logout:" destination="9Ds-sr-Zer" eventType="touchUpInside" id="jWv-K8-hXg"/>
                                     <action selector="logout:" destination="Vz9-vX-YDn" eventType="touchUpInside" id="nig-FH-4sF"/>
                                 </connections>
                             </button>
@@ -49,6 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="pKb-0i-sat"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="first" id="uBE-Et-AtT"/>
+                    <navigationItem key="navigationItem" id="VrC-ec-JDQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWm-aw-VKs" userLabel="First Responder" sceneMemberID="firstResponder"/>

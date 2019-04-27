@@ -29,7 +29,6 @@ class SettingsViewController: UIViewController {
         
         do {
             try authUI?.signOut()
-            print("LOGOUT")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let loginViewController = storyBoard.instantiateInitialViewController() as! LoginViewController
             self.present(loginViewController, animated: true, completion: nil)
