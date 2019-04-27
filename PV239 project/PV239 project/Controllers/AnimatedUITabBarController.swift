@@ -12,9 +12,19 @@ class AnimatedUITabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //tabBar.selectedItem = tabBar.items![1]
+        
+        
 
         delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.tabBarController?.selectedIndex = 2
+        
+        print("xxx")
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +52,6 @@ extension AnimatedUITabBarController: UITabBarControllerDelegate  {
         guard let tabViewControllers = tabBarController.viewControllers else { return false }
         guard let toIndex = tabViewControllers.index(of: viewController) else { return false }
         
-        // Uncomment for animations
         //animateToTab(toIndex: toIndex)
         return true
     }
