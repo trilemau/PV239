@@ -13,7 +13,7 @@ class TransactionsTableViewController: UITableViewController {
     
     
     var transactions: [Transaction] = [
-        Transaction(transactionType: TransactionType.Expense, category: Category.Clothes, amount: 20, date: Date(timeIntervalSince1970: 1554589144))
+        Transaction(transactionType: TransactionType.Expense, category: Category.Clothes, amount: 499, date: Date(timeIntervalSince1970: 1554589144))
     ]
     
     override func viewDidLoad() {
@@ -83,14 +83,13 @@ class TransactionsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
-
 }
