@@ -15,8 +15,6 @@ class AnimatedUITabBarController: UITabBarController {
         
         //tabBar.selectedItem = tabBar.items![1]
         
-        
-
         delegate = self
         // Do any additional setup after loading the view.
     }
