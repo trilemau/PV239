@@ -91,6 +91,14 @@ class TransactionsTableViewController: UITableViewController {
         
         let db = Firestore.firestore()
         let id = UUID().uuidString
+        
+        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+            Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
+            ])
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
+        
         db.collection("transactions").addDocument(data: [
             "id": id,
             "transactionType": TransactionType.Expense.description,
@@ -101,14 +109,6 @@ class TransactionsTableViewController: UITableViewController {
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
-            }
-            else {
-                self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
-                    Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
-                ])
-                self.tableView.beginUpdates()
-                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-                self.tableView.endUpdates()
             }
         }
     }
