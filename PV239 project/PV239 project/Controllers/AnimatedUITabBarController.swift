@@ -21,8 +21,6 @@ class AnimatedUITabBarController: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.tabBarController?.selectedIndex = 2
-        
-        print("xxx")
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +46,7 @@ extension AnimatedUITabBarController: UITabBarControllerDelegate  {
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         guard let tabViewControllers = tabBarController.viewControllers else { return false }
-        guard let toIndex = tabViewControllers.index(of: viewController) else { return false }
+        guard tabViewControllers.index(of: viewController) != nil else { return false }
         
         //animateToTab(toIndex: toIndex)
         return true
