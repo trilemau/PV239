@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 import FirebaseUI
 
 class LoginViewController: UIViewController {
@@ -23,9 +24,11 @@ class LoginViewController: UIViewController {
         checkLoggedIn()
     }
     
-    func checkLoggedIn() {
+    private func checkLoggedIn() {
         Auth.auth().addStateDidChangeListener {auth, user in
             if user != nil {
+                self.getTransactionsForUser(userId: user!.uid)
+                
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Tabs", bundle: nil)
                 let tabsViewController = storyBoard.instantiateInitialViewController() as! AnimatedUITabBarController
                 self.present(tabsViewController, animated: true, completion: nil)
@@ -36,16 +39,50 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func login() {
+    private func login() {
         let authUI = FUIAuth.defaultAuthUI()
         let authViewController = authUI?.authViewController()
         self.present(authViewController!, animated: false, completion: nil)
     }
 
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+    private func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if error != nil {
             // handle errors
             return
+        }
+    }
+    
+    private func getTransactionsForUser(userId: String) {
+        let db = Firestore.firestore()
+        db.collection("transactions").whereField("user_id", isEqualTo: userId).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            }
+            else {
+                var transactions: [Transaction] = []
+                
+                for document in querySnapshot!.documents {
+                    let transaction: Transaction = Transaction()
+                    for record in document.data() {
+                        switch record.key {
+                            case "id":
+                                transaction.id = record.value as? String
+                            case "transactionType":
+                                transaction.setTransactionType(transactionTypeName: record.value as? String ?? "unknown")
+                            case "category":
+                                transaction.setCategory(categoryName: record.value as? String ?? "unknown")
+                            case "amount":
+                                transaction.amount = record.value as? Double
+                            case "date":
+                                transaction.date = record.value as? Date
+                            default:
+                                break
+                        }
+                    }
+                    transactions.append(transaction)
+                }
+                TransactionsManager.shared.setTransactions(transactions: transactions)
+            }
         }
     }
     

@@ -14,8 +14,8 @@ enum TransactionType {
     
     var description: String {
         switch self {
-        case .Expense: return "Expense"
-        case .Income: return "Income"
+            case .Expense: return "Expense"
+            case .Income: return "Income"
         }
     }
 }

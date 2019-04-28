@@ -7,14 +7,12 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class TransactionsTableViewController: UITableViewController {
-
     
-    
-    var transactions: [Transaction] = [
-        Transaction(transactionType: TransactionType.Expense, category: Category.Clothes, amount: 499, date: Date(timeIntervalSince1970: 1554589144))
-    ]
+    var transactions: [Transaction] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +22,11 @@ class TransactionsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.transactions = TransactionsManager.shared.getTransactions()
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+        self.tableView.endUpdates()
     }
 
     // MARK: - Table view data source
@@ -83,6 +86,32 @@ class TransactionsTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func addTransactionClicked(_ sender: UIButton) {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        let db = Firestore.firestore()
+        let id = UUID().uuidString
+        db.collection("transactions").addDocument(data: [
+            "id": id,
+            "transactionType": TransactionType.Expense.description,
+            "category": Category.EatingOut.description,
+            "amount": 500,
+            "date": Date(),
+            "user_id": userId
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            }
+            else {
+                self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+                    Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
+                ])
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.tableView.endUpdates()
+            }
+        }
+    }
     
     // MARK: - Navigation
 

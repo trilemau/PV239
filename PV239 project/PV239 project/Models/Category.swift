@@ -20,14 +20,14 @@ enum Category {
     
     var description: String {
         switch self {
-        case .Clothes: return "Clothes"
-        case .EatingOut: return "Eating out"
-        case .Entertainment: return "Entertainment"
-        case .Fuel: return "Fuel"
-        case .Kids: return "Kids"
-        case .Shopping: return "Shopping"
-        case .Sport: return "Sport"
-        case .Travel: return "Travel"
+            case .Clothes: return "Clothes"
+            case .EatingOut: return "Eating out"
+            case .Entertainment: return "Entertainment"
+            case .Fuel: return "Fuel"
+            case .Kids: return "Kids"
+            case .Shopping: return "Shopping"
+            case .Sport: return "Sport"
+            case .Travel: return "Travel"
         }
     }
 }
