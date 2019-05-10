@@ -36,7 +36,8 @@ class AddTransactionTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller: TransactionsTableViewController = segue.destination as? TransactionsTableViewController {
-            controller.transactions.append(Transaction(id: "111", transactionType: TransactionType.Expense, category: Category.Clothes, amount: 20, date: Date(timeIntervalSinceNow: 0)))
+            controller.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+                Transaction(id: "111", transactionType: TransactionType.Expense, category: Category.Clothes, amount: 20, date: Date(timeIntervalSinceNow: 0))])
         }
     }
 }

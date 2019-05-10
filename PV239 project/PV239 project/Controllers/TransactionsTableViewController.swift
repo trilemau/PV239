@@ -28,6 +28,18 @@ class TransactionsTableViewController: UITableViewController {
         self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
         self.tableView.endUpdates()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.transactions = TransactionsManager.shared.getTransactions()
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+        self.tableView.endUpdates()
+        
+        for t in transactions {
+            print("amount", t.amount)
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -131,7 +143,14 @@ class TransactionsTableViewController: UITableViewController {
             }
         }
     }
-    @IBAction func onButtonClicked(_ sender: UIBarButtonItem) {
-        transactions.append(Transaction(id: "111", transactionType: TransactionType.Expense, category: Category.Clothes, amount: 200, date: Date(timeIntervalSinceNow: 0)))
+
+    @IBAction func onButtonClicked(_ sender: Any) {
+        print("button")
+        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+            Transaction(id: "111", transactionType: TransactionType.Expense, category: Category.Clothes, amount: 40, date: Date(timeIntervalSinceNow: 0))])
+        
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
     }
 }

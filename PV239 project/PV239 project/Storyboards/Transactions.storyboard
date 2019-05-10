@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="gMd-g0-oZg">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="gMd-g0-oZg">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -90,6 +90,9 @@
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="mD3-qH-uSl" eventType="touchUpInside" id="whe-5j-jyd"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="onButtonClicked:" destination="mD3-qH-uSl" id="Fra-IJ-crO"/>
