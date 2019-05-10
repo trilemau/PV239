@@ -28,6 +28,18 @@ class TransactionsTableViewController: UITableViewController {
         self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
         self.tableView.endUpdates()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.transactions = TransactionsManager.shared.getTransactions()
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+        self.tableView.endUpdates()
+        
+        for t in transactions {
+            print("amount", t.amount)
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -43,9 +55,12 @@ class TransactionsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionIdentifier", for: indexPath) as! TransactionTableViewCell
 
-        cell.textLabel?.text = transactions[indexPath.row].description
+        let transaction = transactions[indexPath.row]
+        
+        cell.categoryLabel.text = transaction.category?.description
+        cell.amountLabel.text = transaction.amount?.description
         
         return cell
     }
@@ -86,32 +101,34 @@ class TransactionsTableViewController: UITableViewController {
     }
     */
 
-    @IBAction func addTransactionClicked(_ sender: UIButton) {
-        guard let userId = Auth.auth().currentUser?.uid else { return }
-        
-        let db = Firestore.firestore()
-        let id = UUID().uuidString
-        
-        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
-            Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
-            ])
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-        self.tableView.endUpdates()
-        
-        db.collection("transactions").addDocument(data: [
-            "id": id,
-            "transactionType": TransactionType.Expense.description,
-            "category": Category.EatingOut.description,
-            "amount": 500,
-            "date": Date(),
-            "user_id": userId
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            }
-        }
-    }
+//    @IBAction func addTransactionClicked(_ sender: UIButton) {
+//        return
+//        
+//        guard let userId = Auth.auth().currentUser?.uid else { return }
+//
+//        let db = Firestore.firestore()
+//        let id = UUID().uuidString
+//
+//        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+//            Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
+//            ])
+//        self.tableView.beginUpdates()
+//        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+//        self.tableView.endUpdates()
+//
+//        db.collection("transactions").addDocument(data: [
+//            "id": id,
+//            "transactionType": TransactionType.Expense.description,
+//            "category": Category.EatingOut.description,
+//            "amount": 500,
+//            "date": Date(),
+//            "user_id": userId
+//        ]) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            }
+//        }
+//    }
     
     // MARK: - Navigation
 
@@ -120,5 +137,20 @@ class TransactionsTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
+        if let controller: TransactionDetailTableViewController = segue.destination as? TransactionDetailTableViewController {
+            if let index = tableView.indexPathForSelectedRow?.row {
+                controller.transaction = transactions[index]
+            }
+        }
+    }
+
+    @IBAction func onButtonClicked(_ sender: Any) {
+        print("button")
+        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+            Transaction(id: "111", transactionType: TransactionType.Expense, category: Category.Clothes, amount: 40, date: Date(timeIntervalSinceNow: 0))])
+        
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
     }
 }

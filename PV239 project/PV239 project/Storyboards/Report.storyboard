@@ -76,7 +76,6 @@
         <!--All-time Report-->
         <scene sceneID="DRb-jo-Hys">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bvS-i8-Yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="tQn-GP-Q7E" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dul-1O-NJQ" customClass="transa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -125,8 +124,9 @@
                     <navigationItem key="navigationItem" title="All-time Report" id="Wxr-My-0Rx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvS-i8-Yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308" y="-27.339901477832512"/>
+            <point key="canvasLocation" x="1337" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e5S-SL-KOv">
