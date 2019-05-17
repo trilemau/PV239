@@ -85,19 +85,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Transactions" image="first" id="Wu5-QY-NwM"/>
                     <navigationItem key="navigationItem" id="3cG-Sh-ge2">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="jdX-1e-r94">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PZj-De-VcT">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onButtonClicked:" destination="mD3-qH-uSl" eventType="touchUpInside" id="whe-5j-jyd"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <action selector="onButtonClicked:" destination="mD3-qH-uSl" id="Fra-IJ-crO"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="pU3-33-TEr">
                             <connections>
                                 <segue destination="HvW-Rx-WU8" kind="show" id="CCs-wh-yYn"/>

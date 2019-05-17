@@ -8,15 +8,26 @@
 
 import UIKit
 
-class AddTransactionTableViewController: UITableViewController {
+class AddTransactionTableViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var transactionTypeField: UITextField!
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     
+    var controller: TransactionsTableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        amountField.delegate = self
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789")
+        let typedCharacterSet = CharacterSet(charactersIn: string)
+        
+        return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
 
     @IBAction func addTransactionButtonClicked(_ sender: UIBarButtonItem) {
@@ -25,19 +36,49 @@ class AddTransactionTableViewController: UITableViewController {
         print(amountField.text!)
         print(dateField.text!)
         
-//        if let controller: TransactionDetailTableViewController = segue.destination as? TransactionDetailTableViewController {
-//            if let index = tableView.indexPathForSelectedRow?.row {
-//                controller.transaction = transactions[index]
-//            }
-//        }
+        let id = UUID().uuidString
+        let transactionType = TransactionType.Expense
+        let category = Category.Entertainment
+        let amount = Double(amountField.text!)!
         
-        navigationController?.popToRootViewController(animated: true)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let date = dateFormatter.date(from: dateField.text!)!
+        
+        controller?.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+            Transaction(id: id, transactionType: transactionType, category: category, amount: amount, date: date)])
+        
+        controller?.addedTransaction = true
+        
+        navigationController?.popViewController(animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller: TransactionsTableViewController = segue.destination as? TransactionsTableViewController {
-            controller.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
-                Transaction(id: "111", transactionType: TransactionType.Expense, category: Category.Clothes, amount: 20, date: Date(timeIntervalSinceNow: 0))])
-        }
-    }
+    //    @IBAction func addTransactionClicked(_ sender: UIButton) {
+    //        return
+    //
+    //        guard let userId = Auth.auth().currentUser?.uid else { return }
+    //
+    //        let db = Firestore.firestore()
+    //        let id = UUID().uuidString
+    //
+    //        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
+    //            Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
+    //            ])
+    //        self.tableView.beginUpdates()
+    //        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+    //        self.tableView.endUpdates()
+    //
+    //        db.collection("transactions").addDocument(data: [
+    //            "id": id,
+    //            "transactionType": TransactionType.Expense.description,
+    //            "category": Category.EatingOut.description,
+    //            "amount": 500,
+    //            "date": Date(),
+    //            "user_id": userId
+    //        ]) { err in
+    //            if let err = err {
+    //                print("Error adding document: \(err)")
+    //            }
+    //        }
+    //    }
 }
