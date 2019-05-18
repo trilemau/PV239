@@ -10,17 +10,35 @@ import UIKit
 
 class AddTransactionTableViewController: UITableViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var transactionImage: UIImageView!
+    @IBOutlet weak var categoryImage: UIImageView!
+    
     @IBOutlet weak var transactionTypeField: UITextField!
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var amountField: UITextField!
-    @IBOutlet weak var dateField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
+    var transactionType: TransactionType = TransactionType.None
+    var category: Category = Category.None
     var controller: TransactionsTableViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        transactionTypeField.isUserInteractionEnabled = false
+        categoryField.isUserInteractionEnabled = false
+        
+        self.hideKeyboardWhenTappedAround()
         amountField.delegate = self
+        
+        datePicker.maximumDate = Date(timeIntervalSinceNow: 0)
+        
+        ReloadImages()
+    }
+    
+    func ReloadImages() {
+        transactionImage.image = transactionType.image
+        categoryImage.image = category.image
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -31,19 +49,11 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
     }
 
     @IBAction func addTransactionButtonClicked(_ sender: UIBarButtonItem) {
-        print(transactionTypeField.text!)
-        print(categoryField.text!)
-        print(amountField.text!)
-        print(dateField.text!)
-        
         let id = UUID().uuidString
         let transactionType = TransactionType.Expense
         let category = Category.Entertainment
         let amount = Double(amountField.text!)!
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        let date = dateFormatter.date(from: dateField.text!)!
+        let date = datePicker.date
         
         controller?.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
             Transaction(id: id, transactionType: transactionType, category: category, amount: amount, date: date)])
@@ -53,32 +63,21 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
         navigationController?.popViewController(animated: true)
     }
     
-    //    @IBAction func addTransactionClicked(_ sender: UIButton) {
-    //        return
-    //
-    //        guard let userId = Auth.auth().currentUser?.uid else { return }
-    //
-    //        let db = Firestore.firestore()
-    //        let id = UUID().uuidString
-    //
-    //        self.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [
-    //            Transaction(id: id, transactionType: TransactionType.Expense, category: Category.EatingOut, amount: 500, date: Date())
-    //            ])
-    //        self.tableView.beginUpdates()
-    //        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-    //        self.tableView.endUpdates()
-    //
-    //        db.collection("transactions").addDocument(data: [
-    //            "id": id,
-    //            "transactionType": TransactionType.Expense.description,
-    //            "category": Category.EatingOut.description,
-    //            "amount": 500,
-    //            "date": Date(),
-    //            "user_id": userId
-    //        ]) { err in
-    //            if let err = err {
-    //                print("Error adding document: \(err)")
-    //            }
-    //        }
-    //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller: TransactionTypeTableViewController = segue.destination as? TransactionTypeTableViewController {
+            controller.addController = self
+        }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

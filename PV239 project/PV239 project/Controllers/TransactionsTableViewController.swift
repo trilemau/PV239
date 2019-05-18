@@ -62,6 +62,7 @@ class TransactionsTableViewController: UITableViewController {
 
         let transaction = transactions[indexPath.row]
         
+        cell.categoryImage.image = transaction.category?.image
         cell.categoryLabel.text = transaction.category?.description
         cell.amountLabel.text = transaction.amount?.description
         

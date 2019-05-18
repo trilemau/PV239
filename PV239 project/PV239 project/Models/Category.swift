@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Category {
     case Clothes
@@ -17,6 +18,8 @@ enum Category {
     case Shopping
     case Sport
     case Travel
+    case Other
+    case None
     
     var description: String {
         switch self {
@@ -28,6 +31,15 @@ enum Category {
             case .Shopping: return "Shopping"
             case .Sport: return "Sport"
             case .Travel: return "Travel"
+            case .Other: return "Other"
+            case .None: return "None"
+        }
+    }
+    
+    var image: UIImage {
+        switch self {
+            case .None: return #imageLiteral(resourceName: "NoneIcon")
+            default: return #imageLiteral(resourceName: "SpendingIcon")
         }
     }
 }
