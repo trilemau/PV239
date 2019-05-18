@@ -21,25 +21,27 @@ class TransactionDetailTableViewController: UITableViewController, UITextFieldDe
     var controller: TransactionsTableViewController?
     var transaction: Transaction?
     var row: Int?
+    var transactionType: TransactionType?
+    var category: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        transactionType = transaction?.transactionType
+        category = transaction?.category
+        
+        transactionImage.image = transactionType?.image
+        categoryImage.image = category?.image
+        
         transactionTypeField.text = transaction?.transactionType?.description
         categoryField.text = transaction?.category?.description
         amountField.text = transaction?.amount?.description
         datePicker.date = transaction!.date!
         
-        transactionTypeField.isUserInteractionEnabled = false
-        categoryField.isUserInteractionEnabled = false
-        
         self.hideKeyboardWhenTappedAround()
         amountField.delegate = self
         
         datePicker.maximumDate = Date(timeIntervalSinceNow: 0)
-        
-        transactionImage.image = transaction?.transactionType?.image
-        categoryImage.image = transaction?.category?.image
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -48,11 +50,25 @@ class TransactionDetailTableViewController: UITableViewController, UITextFieldDe
         
         return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
+    
+    func CheckAttributes() -> Bool {
+        if (amountField.text?.count == 0) {
+            CreateAlert(message: "Amount was not entered", controller: self)
+            return false
+        }
+        
+        return true
+    }
 
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
-        // TODO: check transaction attributes
+        if (!CheckAttributes()) {
+            return
+        }
         
-        transaction?.amount = Double(amountField.text!)!
+        transaction?.transactionType = transactionType
+        transaction?.category = category
+        transaction?.amount = Int(amountField.text!)!
+        transaction?.date = datePicker.date
         
         navigationController?.popToRootViewController(animated: true)
     }

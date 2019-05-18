@@ -21,13 +21,11 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
     var transactionType: TransactionType = TransactionType.None
     var category: Category = Category.None
     var controller: TransactionsTableViewController?
+    var categorySelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        transactionTypeField.isUserInteractionEnabled = false
-        categoryField.isUserInteractionEnabled = false
-        
+
         self.hideKeyboardWhenTappedAround()
         amountField.delegate = self
         
@@ -43,10 +41,33 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
         
         return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
+    
+    func CheckAttributes() -> Bool {
+        if (transactionType == TransactionType.None) {
+            CreateAlert(message: "Transaction type was not selected", controller: self)
+            return false
+        }
+        
+        if (!categorySelected) {
+            CreateAlert(message: "Category was not selected", controller: self)
+            return false
+        }
+        
+        if (amountField.text?.count == 0) {
+            CreateAlert(message: "Amount was not entered", controller: self)
+            return false
+        }
+        
+        return true
+    }
 
     @IBAction func addTransactionButtonClicked(_ sender: UIBarButtonItem) {
+        if (!CheckAttributes()) {
+            return
+        }
+        
         let id = UUID().uuidString
-        let amount = Double(amountField.text!)!
+        let amount = Int(amountField.text!)!
         let date = datePicker.date
         
         controller?.transactions = TransactionsManager.shared.addTransactions(transactionsToAdd: [

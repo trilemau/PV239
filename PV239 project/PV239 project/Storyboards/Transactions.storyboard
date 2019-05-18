@@ -17,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="gMd-g0-oZg">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="gMd-g0-oZg">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-et-trj">
-                                    <rect key="frame" x="13" y="28" width="163.33333333333334" height="36"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-et-trj">
+                                    <rect key="frame" x="18" y="28" width="163.33333333333334" height="36"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="qHb-et-trj" firstAttribute="leading" secondItem="gMd-g0-oZg" secondAttribute="leading" constant="8" id="HHt-Qe-KdB"/>
+                                <constraint firstItem="qHb-et-trj" firstAttribute="leading" secondItem="gMd-g0-oZg" secondAttribute="leading" constant="18" id="1Lu-3U-hGb"/>
                                 <constraint firstAttribute="bottom" secondItem="qHb-et-trj" secondAttribute="bottom" constant="8" id="N0G-kp-5f3"/>
                             </constraints>
                         </view>
@@ -41,20 +41,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="68.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouV-9c-dji">
-                                            <rect key="frame" x="74" y="38" width="64.666666666666686" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="February, 30 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouV-9c-dji">
+                                            <rect key="frame" x="74" y="35" width="147" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Eating Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5a-PK-it3">
-                                            <rect key="frame" x="74" y="8.9999999999999982" width="81" height="20.333333333333329"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="200 kč" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfb-dR-m9W">
-                                            <rect key="frame" x="146" y="37" width="53" height="21"/>
+                                            <rect key="frame" x="74" y="12.999999999999886" width="81" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -62,26 +56,30 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-Dl-COf">
                                             <rect key="frame" x="16" y="10" width="50" height="50"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 000 000 Kč" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqg-Hx-vfa">
+                                            <rect key="frame" x="221.66666666666663" y="23.333333333333329" width="111" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="ouV-9c-dji" secondAttribute="bottom" constant="9.6699999999999999" id="6U5-Qd-KS8"/>
-                                        <constraint firstItem="ouV-9c-dji" firstAttribute="top" secondItem="I5a-PK-it3" secondAttribute="bottom" constant="8.6699999999999999" id="FWK-XW-xjt"/>
-                                        <constraint firstItem="gfb-dR-m9W" firstAttribute="top" secondItem="I5a-PK-it3" secondAttribute="bottom" constant="8.6699999999999999" id="HA6-c4-4qX"/>
-                                        <constraint firstAttribute="bottom" secondItem="gfb-dR-m9W" secondAttribute="bottom" constant="9.6699999999999999" id="Ika-uV-tML"/>
-                                        <constraint firstItem="ouV-9c-dji" firstAttribute="leading" secondItem="cfK-Dl-COf" secondAttribute="trailing" constant="8" id="KIC-cZ-zKk"/>
                                         <constraint firstItem="cfK-Dl-COf" firstAttribute="leading" secondItem="gHH-Rv-ON4" secondAttribute="leadingMargin" id="MRJ-H8-cRE"/>
                                         <constraint firstItem="ouV-9c-dji" firstAttribute="leading" secondItem="cfK-Dl-COf" secondAttribute="trailing" constant="8" id="Pkl-a5-hHy"/>
-                                        <constraint firstItem="I5a-PK-it3" firstAttribute="top" secondItem="gHH-Rv-ON4" secondAttribute="top" constant="9" id="Td4-87-ZEj"/>
-                                        <constraint firstItem="gfb-dR-m9W" firstAttribute="leading" secondItem="ouV-9c-dji" secondAttribute="trailing" constant="7.3300000000000001" id="UiF-2I-YfY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ouV-9c-dji" secondAttribute="bottom" constant="3" id="Px8-Pc-zli"/>
+                                        <constraint firstItem="I5a-PK-it3" firstAttribute="top" secondItem="gHH-Rv-ON4" secondAttribute="topMargin" constant="3" id="b2w-hv-5MK"/>
+                                        <constraint firstItem="ouV-9c-dji" firstAttribute="top" secondItem="I5a-PK-it3" secondAttribute="bottom" constant="2" id="ftb-dL-g1j"/>
                                         <constraint firstItem="cfK-Dl-COf" firstAttribute="centerY" secondItem="gHH-Rv-ON4" secondAttribute="centerY" id="oKl-Ux-hEj"/>
+                                        <constraint firstItem="Eqg-Hx-vfa" firstAttribute="centerY" secondItem="gHH-Rv-ON4" secondAttribute="centerY" id="pbJ-S1-uEE"/>
                                         <constraint firstItem="I5a-PK-it3" firstAttribute="leading" secondItem="cfK-Dl-COf" secondAttribute="trailing" constant="8" id="uhK-Xa-hql"/>
-                                        <constraint firstItem="ouV-9c-dji" firstAttribute="leading" secondItem="cfK-Dl-COf" secondAttribute="trailing" constant="8" id="vqd-AI-tfB"/>
+                                        <constraint firstAttribute="trailing" secondItem="Eqg-Hx-vfa" secondAttribute="trailing" constant="8.3300000000000001" id="zQd-Ol-7Jt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="amountLabel" destination="gfb-dR-m9W" id="wBn-KB-TvD"/>
+                                    <outlet property="amountLabel" destination="Eqg-Hx-vfa" id="3h9-KO-f2l"/>
                                     <outlet property="categoryImage" destination="cfK-Dl-COf" id="ETf-HQ-Tgf"/>
-                                    <outlet property="categoryLabel" destination="I5a-PK-it3" id="7Gr-27-RXW"/>
+                                    <outlet property="categoryLabel" destination="I5a-PK-it3" id="uVY-eK-DNE"/>
+                                    <outlet property="dateLabel" destination="ouV-9c-dji" id="wxp-u4-PgF"/>
                                     <segue destination="KkG-w7-HP8" kind="show" id="Mau-5V-wkg"/>
                                 </connections>
                             </tableViewCell>
@@ -144,7 +142,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg4-NQ-zsQ">
                                                     <rect key="frame" x="16" y="10" width="40" height="40"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select transaction type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-Df-rmj">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select transaction type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-Df-rmj">
                                                     <rect key="frame" x="69" y="19" width="191" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -173,7 +171,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efn-XH-2Ni">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efn-XH-2Ni">
                                                     <rect key="frame" x="74" y="19" width="131" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -201,18 +199,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter amount" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="phf-9C-Per">
-                                                    <rect key="frame" x="246" y="11" width="113" height="22"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter amount" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="phf-9C-Per">
+                                                    <rect key="frame" x="219" y="11" width="140" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" smartQuotesType="no"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                            <integer key="value" value="9"/>
+                                                            <integer key="value" value="6"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kč" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M58-bf-w63">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kč" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M58-bf-w63">
                                                     <rect key="frame" x="16" y="11" width="24.666666666666671" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -658,7 +656,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Edb-e7-ffX">
                                                     <rect key="frame" x="16" y="10" width="40" height="40"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select transaction type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-O0-PeG">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select transaction type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-O0-PeG">
                                                     <rect key="frame" x="69" y="19" width="191" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -687,7 +685,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-cO-Inj">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-cO-Inj">
                                                     <rect key="frame" x="74" y="19" width="131" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -715,18 +713,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter amount" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="imz-ac-k1S">
-                                                    <rect key="frame" x="246" y="11" width="113" height="22"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter amount" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="imz-ac-k1S">
+                                                    <rect key="frame" x="219" y="11" width="140" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" smartQuotesType="no"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                            <integer key="value" value="9"/>
+                                                            <integer key="value" value="6"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kč" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-6b-yKH">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kč" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-6b-yKH">
                                                     <rect key="frame" x="16" y="11" width="24.666666666666671" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>

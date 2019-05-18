@@ -21,20 +21,20 @@ class TransactionTypeTableViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             addController?.transactionType = TransactionType.Income
-            editController?.transaction?.transactionType = TransactionType.Income
+            editController?.transactionType = TransactionType.Income
         case 1:
             addController?.transactionType = TransactionType.Expense
-            editController?.transaction?.transactionType = TransactionType.Expense
+            editController?.transactionType = TransactionType.Expense
         default:
             addController?.transactionType = TransactionType.None
-            editController?.transaction?.transactionType = TransactionType.None
+            editController?.transactionType = TransactionType.None
         }
         
         addController?.transactionImage.image = addController?.transactionType.image
         addController?.transactionTypeField.text = addController?.transactionType.description
             
-        editController?.transactionImage.image = editController?.transaction?.transactionType?.image
-        editController?.transactionTypeField.text = editController?.transaction?.transactionType?.description
+        editController?.transactionImage.image = editController?.transactionType?.image
+        editController?.transactionTypeField.text = editController?.transactionType?.description
         
         navigationController?.popViewController(animated: true)
     }

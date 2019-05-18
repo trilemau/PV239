@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
                             case "category":
                                 transaction.setCategory(categoryName: record.value as? String ?? "unknown")
                             case "amount":
-                                transaction.amount = record.value as? Double
+                                transaction.amount = record.value as? Int
                             case "date":
                                 transaction.date = record.value as? Date
                             default:

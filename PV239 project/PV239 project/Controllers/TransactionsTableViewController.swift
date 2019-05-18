@@ -64,7 +64,26 @@ class TransactionsTableViewController: UITableViewController {
         
         cell.categoryImage.image = transaction.category?.image
         cell.categoryLabel.text = transaction.category?.description
-        cell.amountLabel.text = transaction.amount?.description
+        
+        var sign = ""
+        
+        switch transaction.transactionType! {
+        case TransactionType.Income:
+            sign = "+"
+            cell.amountLabel.textColor = UIColor(red: 79/255, green: 143/255, blue: 0, alpha: 1)
+        case TransactionType.Expense:
+            sign = "-"
+            cell.amountLabel.textColor = UIColor(red: 1, green: 40/255, blue: 0, alpha: 1)
+        default:
+            cell.amountLabel.textColor = UIColor.black
+        }
+        
+        cell.amountLabel.text = "\(sign)\(transaction.amount?.formattedWithSeparator ?? "Error") Kč"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        cell.dateLabel.text = dateFormatter.string(from: transaction.date!)
         
         return cell
     }

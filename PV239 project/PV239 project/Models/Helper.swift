@@ -40,3 +40,28 @@ extension String
         return String( Array(self).prefix(upTo: n) )
     }
 }
+
+extension Formatter {
+    static let withSeparator: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+}
+
+extension Int {
+    var formattedWithSeparator: String {
+        return Formatter.withSeparator.string(for: self) ?? ""
+    }
+}
+
+func CreateAlert(message: String, controller: UIViewController) {
+    let popup = UIAlertController(title: "Cannot add transaction", message: message, preferredStyle: UIAlertControllerStyle.alert)
+    
+    popup.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+        popup.dismiss(animated: true, completion: nil)
+    }))
+    
+    controller.present(popup, animated: true, completion: nil)
+}

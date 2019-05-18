@@ -12,7 +12,7 @@ class Transaction {
     var id: String?
     var transactionType: TransactionType?
     var category: Category?
-    var amount: Double?
+    var amount: Int?
     var date: Date?
     
     init() {
@@ -23,7 +23,7 @@ class Transaction {
         self.date = nil
     }
     
-    init(id: String, transactionType: TransactionType, category: Category, amount: Double, date: Date) {
+    init(id: String, transactionType: TransactionType, category: Category, amount: Int, date: Date) {
         self.id = id
         self.transactionType = transactionType
         self.category = category
