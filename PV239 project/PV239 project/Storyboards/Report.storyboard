@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Report-->
+        <!--Dashboard-->
         <scene sceneID="hau-m2-D7u">
             <objects>
                 <viewController id="V00-mH-fuK" sceneMemberID="viewController">
@@ -19,27 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-LM-Ts8">
-                                <rect key="frame" x="145" y="188" width="86" height="42"/>
+                                <rect key="frame" x="145" y="240" width="86" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="All-time"/>
+                                <state key="normal" title="All-time">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="tQn-GP-Q7E" kind="show" id="5kP-0i-Erg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGE-ME-SA6">
-                                <rect key="frame" x="143" y="238" width="88" height="42"/>
+                                <rect key="frame" x="143" y="290" width="88" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Monthly"/>
+                                <state key="normal" title="Monthly">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-FS-FVd">
-                                <rect key="frame" x="148" y="288" width="79" height="42"/>
+                                <rect key="frame" x="148" y="340" width="79" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Weekly"/>
+                                <state key="normal" title="Weekly">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96l-e6-o9I">
-                                <rect key="frame" x="160" y="338" width="54" height="42"/>
+                                <rect key="frame" x="160" y="390" width="54" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Daily"/>
+                                <state key="normal" title="Daily">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,8 +73,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Report" image="second" badgeValue="hhh" id="7IE-ML-aKn"/>
-                    <navigationItem key="navigationItem" title="Report" id="G1v-lc-Rjd"/>
+                    <tabBarItem key="tabBarItem" title="Report" image="second" id="7IE-ML-aKn"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="G1v-lc-Rjd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZY-a1-Ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,9 +141,13 @@
             <objects>
                 <navigationController id="C0G-yj-Z1L" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qfq-HW-Fkm">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Qfq-HW-Fkm">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="V00-mH-fuK" kind="relationship" relationship="rootViewController" id="K3B-wp-rEt"/>
@@ -149,4 +161,5 @@
     <resources>
         <image name="second" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -17,25 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="gMd-g0-oZg">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                        <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="UdS-HY-zFG">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-et-trj">
-                                    <rect key="frame" x="18" y="28" width="163.33333333333334" height="36"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="qHb-et-trj" firstAttribute="leading" secondItem="gMd-g0-oZg" secondAttribute="leading" constant="18" id="1Lu-3U-hGb"/>
-                                <constraint firstAttribute="bottom" secondItem="qHb-et-trj" secondAttribute="bottom" constant="8" id="N0G-kp-5f3"/>
-                            </constraints>
-                        </view>
+                        </progressView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="transactionIdentifier" rowHeight="69" id="qa7-Yl-TD5" customClass="TransactionTableViewCell" customModule="PV239_project" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="69"/>
+                                <rect key="frame" x="0.0" y="30" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qa7-Yl-TD5" id="gHH-Rv-ON4">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="68.666666666666671"/>
@@ -90,7 +78,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Transactions" image="first" id="Wu5-QY-NwM"/>
-                    <navigationItem key="navigationItem" id="3cG-Sh-ge2">
+                    <navigationItem key="navigationItem" title="Transactions" id="3cG-Sh-ge2">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="pU3-33-TEr">
                             <connections>
                                 <segue destination="HvW-Rx-WU8" kind="show" id="CCs-wh-yYn"/>
@@ -108,9 +96,13 @@
         <scene sceneID="K6B-aF-cov">
             <objects>
                 <navigationController id="E4W-ZW-fEq" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gnz-HK-Vqf">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gnz-HK-Vqf">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="mD3-qH-uSl" kind="relationship" relationship="rootViewController" id="Ilx-Mo-dXM"/>
@@ -284,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="1633" y="117"/>
         </scene>
-        <!--Select Category-->
+        <!--Category-->
         <scene sceneID="ehX-b7-2Iq">
             <objects>
-                <tableViewController title="Select Category" id="BPv-dn-VMt" customClass="CategoriesTableViewController" customModule="PV239_project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Category" id="BPv-dn-VMt" customClass="CategoriesTableViewController" customModule="PV239_project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qQr-qt-zg3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,10 +554,10 @@
             </objects>
             <point key="canvasLocation" x="2454" y="831"/>
         </scene>
-        <!--Select Transaction Type-->
+        <!--Transaction Type-->
         <scene sceneID="Qxm-rK-xuR">
             <objects>
-                <tableViewController title="Select Transaction Type" id="aeR-8y-hPA" customClass="TransactionTypeTableViewController" customModule="PV239_project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Transaction Type" id="aeR-8y-hPA" customClass="TransactionTypeTableViewController" customModule="PV239_project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0xx-fR-gbN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -836,7 +828,8 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qt8-P7-3vO"/>
-        <segue reference="HHK-eU-8Qi"/>
+        <segue reference="gv9-sM-0rN"/>
+        <segue reference="j4a-Uh-Bft"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

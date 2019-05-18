@@ -14,9 +14,13 @@
         <scene sceneID="8rM-G9-hOf">
             <objects>
                 <navigationController id="yCp-DX-fli" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gWX-rO-cOC">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gWX-rO-cOC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="9Ds-sr-Zer" kind="relationship" relationship="rootViewController" id="bBA-YR-Cnc"/>
@@ -35,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1o-oV-OWT">
-                                <rect key="frame" x="163.66666666666666" y="391" width="48" height="30"/>
+                                <rect key="frame" x="183.66666666666666" y="391" width="48" height="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="0.22497355192281898" blue="0.16240626834450977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -55,7 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="pKb-0i-sat"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="first" id="uBE-Et-AtT"/>
-                    <navigationItem key="navigationItem" id="VrC-ec-JDQ"/>
+                    <navigationItem key="navigationItem" title="Settings" id="VrC-ec-JDQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWm-aw-VKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,4 +71,5 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
