@@ -38,10 +38,10 @@ class TransactionsTableViewController: UITableViewController {
             self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
             self.tableView.endUpdates()
             
-            self.tableView.reloadData()
-            
             addedTransaction = false
         }
+        
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -74,7 +74,9 @@ class TransactionsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller: TransactionDetailTableViewController = segue.destination as? TransactionDetailTableViewController {
             if let index = tableView.indexPathForSelectedRow?.row {
+                controller.controller = self
                 controller.transaction = transactions[index]
+                controller.row = index
             }
         }
         

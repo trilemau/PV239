@@ -8,17 +8,19 @@
 
 import UIKit
 
-class TransactionDetailTableViewController: UITableViewController {
-
-    var transaction: Transaction?
+class TransactionDetailTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var transactionImage: UIImageView!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     @IBOutlet weak var transactionTypeField: UITextField!
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var amountField: UITextField!
-    @IBOutlet weak var dateField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
-    var transactionType: TransactionType = TransactionType.None
-    var category: Category = Category.None
+    var controller: TransactionsTableViewController?
+    var transaction: Transaction?
+    var row: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +28,32 @@ class TransactionDetailTableViewController: UITableViewController {
         transactionTypeField.text = transaction?.transactionType?.description
         categoryField.text = transaction?.category?.description
         amountField.text = transaction?.amount?.description
+        datePicker.date = transaction!.date!
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        dateField.text = formatter.string(from: (transaction?.date!)!)
+        transactionTypeField.isUserInteractionEnabled = false
+        categoryField.isUserInteractionEnabled = false
+        
+        self.hideKeyboardWhenTappedAround()
+        amountField.delegate = self
+        
+        datePicker.maximumDate = Date(timeIntervalSinceNow: 0)
+        
+        transactionImage.image = transaction?.transactionType?.image
+        categoryImage.image = transaction?.category?.image
     }
     
-    func ReloadImages() {
-        // TODO:
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789")
+        let typedCharacterSet = CharacterSet(charactersIn: string)
+        
+        return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
 
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
-        print("Save button clicked")
+        // TODO: check transaction attributes
+        
+        transaction?.amount = Double(amountField.text!)!
+        
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -45,12 +61,13 @@ class TransactionDetailTableViewController: UITableViewController {
         let popup = UIAlertController(title: "Delete transaction", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.alert)
         
         popup.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            self.controller?.transactions.remove(at: self.row!)
+            
             self.navigationController?.popToRootViewController(animated: true)
             popup.dismiss(animated: true, completion: nil)
         }))
         
         popup.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
-            self.navigationController?.popToRootViewController(animated: true)
             popup.dismiss(animated: true, completion: nil)
         }))
         
@@ -59,6 +76,10 @@ class TransactionDetailTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller: TransactionTypeTableViewController = segue.destination as? TransactionTypeTableViewController {
+            controller.editController = self
+        }
+        
+        if let controller: CategoriesTableViewController = segue.destination as? CategoriesTableViewController {
             controller.editController = self
         }
     }

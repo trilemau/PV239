@@ -33,10 +33,6 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
         
         datePicker.maximumDate = Date(timeIntervalSinceNow: 0)
         
-        ReloadImages()
-    }
-    
-    func ReloadImages() {
         transactionImage.image = transactionType.image
         categoryImage.image = category.image
     }
@@ -50,8 +46,6 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
 
     @IBAction func addTransactionButtonClicked(_ sender: UIBarButtonItem) {
         let id = UUID().uuidString
-        let transactionType = TransactionType.Expense
-        let category = Category.Entertainment
         let amount = Double(amountField.text!)!
         let date = datePicker.date
         
@@ -65,6 +59,10 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller: TransactionTypeTableViewController = segue.destination as? TransactionTypeTableViewController {
+            controller.addController = self
+        }
+        
+        if let controller: CategoriesTableViewController = segue.destination as? CategoriesTableViewController {
             controller.addController = self
         }
     }

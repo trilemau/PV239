@@ -19,24 +19,22 @@ class TransactionTypeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: addController?.transactionType = TransactionType.Income
-        case 1: addController?.transactionType = TransactionType.Expense
+        case 0:
+            addController?.transactionType = TransactionType.Income
+            editController?.transaction?.transactionType = TransactionType.Income
+        case 1:
+            addController?.transactionType = TransactionType.Expense
+            editController?.transaction?.transactionType = TransactionType.Expense
         default:
             addController?.transactionType = TransactionType.None
+            editController?.transaction?.transactionType = TransactionType.None
         }
         
-        switch indexPath.row {
-        case 0: editController?.transactionType = TransactionType.Income
-        case 1: editController?.transactionType = TransactionType.Expense
-        default:
-            editController?.transactionType = TransactionType.None
-        }
-        
-        addController?.ReloadImages()
+        addController?.transactionImage.image = addController?.transactionType.image
         addController?.transactionTypeField.text = addController?.transactionType.description
             
-        editController?.ReloadImages()
-        editController?.transactionTypeField.text = editController?.transactionType.description
+        editController?.transactionImage.image = editController?.transaction?.transactionType?.image
+        editController?.transactionTypeField.text = editController?.transaction?.transactionType?.description
         
         navigationController?.popViewController(animated: true)
     }
