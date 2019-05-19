@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk5-ZP-5AC">
-                                <rect key="frame" x="23" y="663" width="368" height="50"/>
+                                <rect key="frame" x="23" y="554" width="368" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dzg-uu-rch"/>
@@ -95,6 +95,7 @@
                             <constraint firstItem="mOI-1z-erq" firstAttribute="leading" secondItem="epx-NV-22o" secondAttribute="leading" constant="23" id="GqH-79-wSq"/>
                             <constraint firstItem="epx-NV-22o" firstAttribute="trailing" secondItem="J8R-s5-MPX" secondAttribute="trailing" constant="23" id="Lgk-Sp-Ebl"/>
                             <constraint firstItem="JOB-8U-7yz" firstAttribute="top" secondItem="2hi-mx-yP0" secondAttribute="bottom" id="PHg-8f-UKL"/>
+                            <constraint firstItem="Qk5-ZP-5AC" firstAttribute="top" secondItem="ZX2-vI-NN3" secondAttribute="bottom" constant="40" id="PVN-NH-2ED"/>
                             <constraint firstItem="epx-NV-22o" firstAttribute="trailing" secondItem="sTc-n3-qY4" secondAttribute="trailing" constant="23" id="PyS-0q-B1K"/>
                             <constraint firstItem="QoD-NA-Fxq" firstAttribute="leading" secondItem="epx-NV-22o" secondAttribute="leading" constant="23" id="QRf-ez-YXX"/>
                             <constraint firstItem="X8a-ZV-9e1" firstAttribute="top" secondItem="epx-NV-22o" secondAttribute="top" constant="55" id="QSz-CA-ddF"/>
@@ -111,7 +112,6 @@
                             <constraint firstItem="mOI-1z-erq" firstAttribute="top" secondItem="JOB-8U-7yz" secondAttribute="bottom" constant="39" id="qaC-Dx-ooS"/>
                             <constraint firstItem="ZX2-vI-NN3" firstAttribute="leading" secondItem="epx-NV-22o" secondAttribute="leading" constant="23" id="vRa-by-edP"/>
                             <constraint firstItem="J8R-s5-MPX" firstAttribute="top" secondItem="epx-NV-22o" secondAttribute="top" constant="55" id="wMd-ke-GtB"/>
-                            <constraint firstItem="epx-NV-22o" firstAttribute="bottom" secondItem="Qk5-ZP-5AC" secondAttribute="bottom" constant="100" id="yyD-Qn-qx6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="epx-NV-22o"/>
                     </view>
