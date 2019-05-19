@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="V00-mH-fuK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUe-uW-RPF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-LM-Ts8">
-                                <rect key="frame" x="145" y="240" width="86" height="42"/>
+                                <rect key="frame" x="145" y="100" width="86" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="All-time">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,35 +29,41 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGE-ME-SA6">
-                                <rect key="frame" x="143" y="290" width="88" height="42"/>
+                                <rect key="frame" x="143" y="150" width="88" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Monthly">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-FS-FVd">
-                                <rect key="frame" x="148" y="340" width="79" height="42"/>
+                                <rect key="frame" x="148" y="200" width="79" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Weekly">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96l-e6-o9I">
-                                <rect key="frame" x="160" y="390" width="54" height="42"/>
+                                <rect key="frame" x="160" y="250" width="54" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Daily">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J1o-3q-kAA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="96l-e6-o9I" firstAttribute="top" secondItem="K9B-FS-FVd" secondAttribute="bottom" constant="8" id="0yn-OK-ape"/>
                             <constraint firstItem="Jbd-E5-54F" firstAttribute="trailing" secondItem="KGE-ME-SA6" secondAttribute="trailing" constant="144" id="4kq-EV-1Yd"/>
+                            <constraint firstAttribute="trailing" secondItem="J1o-3q-kAA" secondAttribute="trailing" id="B0Y-1B-zGV"/>
+                            <constraint firstItem="J1o-3q-kAA" firstAttribute="top" secondItem="Jbd-E5-54F" secondAttribute="top" id="B60-mh-Qwj"/>
                             <constraint firstItem="vSC-LM-Ts8" firstAttribute="top" secondItem="Jbd-E5-54F" secondAttribute="top" constant="100" id="B93-rm-Fwk"/>
                             <constraint firstItem="Jbd-E5-54F" firstAttribute="trailing" secondItem="vSC-LM-Ts8" secondAttribute="trailing" constant="144" id="Dhs-p8-8ge"/>
                             <constraint firstItem="Jbd-E5-54F" firstAttribute="trailing" secondItem="K9B-FS-FVd" secondAttribute="trailing" constant="148" id="FZ5-0l-FfG"/>
                             <constraint firstItem="K9B-FS-FVd" firstAttribute="top" secondItem="KGE-ME-SA6" secondAttribute="bottom" constant="8" id="KKV-4i-pae"/>
+                            <constraint firstItem="J1o-3q-kAA" firstAttribute="leading" secondItem="XUe-uW-RPF" secondAttribute="leading" id="T0S-6C-Rll"/>
                             <constraint firstItem="vSC-LM-Ts8" firstAttribute="leading" secondItem="Jbd-E5-54F" secondAttribute="leading" constant="145" id="aMu-hT-r39"/>
                             <constraint firstItem="Jbd-E5-54F" firstAttribute="trailing" secondItem="96l-e6-o9I" secondAttribute="trailing" constant="161" id="g2Z-cp-Kpc"/>
                             <constraint firstItem="K9B-FS-FVd" firstAttribute="leading" secondItem="Jbd-E5-54F" secondAttribute="leading" constant="148" id="gBA-7Y-JEj"/>
@@ -75,7 +81,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Report" image="second" id="7IE-ML-aKn"/>
                     <navigationItem key="navigationItem" title="Dashboard" id="G1v-lc-Rjd"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZY-a1-Ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +91,7 @@
             <objects>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="tQn-GP-Q7E" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dul-1O-NJQ" customClass="transa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="3UT-eZ-4Bc">
@@ -140,8 +145,7 @@
         <scene sceneID="e5S-SL-KOv">
             <objects>
                 <navigationController id="C0G-yj-Z1L" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Qfq-HW-Fkm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Qfq-HW-Fkm">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

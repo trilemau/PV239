@@ -14,7 +14,7 @@
         <scene sceneID="8rM-G9-hOf">
             <objects>
                 <navigationController id="yCp-DX-fli" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gWX-rO-cOC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="gWX-rO-cOC">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,11 +35,11 @@
             <objects>
                 <viewController id="9Ds-sr-Zer" customClass="SettingsViewController" customModule="PV239_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gi7-GA-f0y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1o-oV-OWT">
-                                <rect key="frame" x="183.66666666666666" y="391" width="48" height="30"/>
+                                <rect key="frame" x="163.66666666666666" y="321" width="48" height="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="0.22497355192281898" blue="0.16240626834450977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -48,12 +48,18 @@
                                     <action selector="logout:" destination="Vz9-vX-YDn" eventType="touchUpInside" id="nig-FH-4sF"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-mz-WPu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hGQ-mz-WPu" firstAttribute="top" secondItem="pKb-0i-sat" secondAttribute="top" id="9js-Fb-xOR"/>
                             <constraint firstItem="G1o-oV-OWT" firstAttribute="centerX" secondItem="gi7-GA-f0y" secondAttribute="centerX" constant="20" id="D3x-8f-u8v"/>
                             <constraint firstItem="G1o-oV-OWT" firstAttribute="centerY" secondItem="gi7-GA-f0y" secondAttribute="centerY" id="Elb-CN-n7C"/>
+                            <constraint firstItem="hGQ-mz-WPu" firstAttribute="leading" secondItem="gi7-GA-f0y" secondAttribute="leading" id="LIL-Si-TnL"/>
                             <constraint firstItem="G1o-oV-OWT" firstAttribute="centerX" secondItem="gi7-GA-f0y" secondAttribute="centerX" id="ex7-aF-Uwe"/>
+                            <constraint firstAttribute="trailing" secondItem="hGQ-mz-WPu" secondAttribute="trailing" id="k6c-oj-rpX"/>
                             <constraint firstItem="G1o-oV-OWT" firstAttribute="centerY" secondItem="gi7-GA-f0y" secondAttribute="centerY" id="rgt-Ke-iVI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pKb-0i-sat"/>
@@ -65,7 +71,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWm-aw-VKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Vz9-vX-YDn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1466" y="-150"/>
+            <point key="canvasLocation" x="-1466.4000000000001" y="-150"/>
         </scene>
     </scenes>
     <resources>
