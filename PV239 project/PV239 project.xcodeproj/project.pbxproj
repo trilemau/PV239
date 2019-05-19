@@ -30,6 +30,7 @@
 		6C84007F2258FA900029D6AF /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */; };
 		6CB2C25D228F777700CA89DB /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2C25C228F777700CA89DB /* CategoriesTableViewController.swift */; };
 		6CCDC103227F8F830068FB23 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC102227F8F830068FB23 /* TransactionTableViewCell.swift */; };
+		6CEEBBC02291E4BC005826ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEEBBBF2291E4BC005826ED /* Login.storyboard */; };
 		90D36909A1D7E0C1D8F24F96 /* Pods_PV239_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CCCB2CA82F65EDC2203F8C /* Pods_PV239_project.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		6CB2C25C228F777700CA89DB /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		6CCDC102227F8F830068FB23 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		6CEEBBBF2291E4BC005826ED /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D1CCCB2CA82F65EDC2203F8C /* Pods_PV239_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PV239_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				6C602C842258EB1B00DD81C1 /* Report.storyboard */,
 				6C602C862258EC0E00DD81C1 /* Settings.storyboard */,
 				23EE3A30225FA34800F25A72 /* Main.storyboard */,
+				6CEEBBBF2291E4BC005826ED /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				6C602C872258EC0E00DD81C1 /* Settings.storyboard in Resources */,
 				6C602C832258EA0F00DD81C1 /* Transactions.storyboard in Resources */,
 				6C602C852258EB1B00DD81C1 /* Report.storyboard in Resources */,
+				6CEEBBC02291E4BC005826ED /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

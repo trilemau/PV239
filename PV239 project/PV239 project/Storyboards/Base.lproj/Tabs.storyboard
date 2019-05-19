@@ -21,13 +21,14 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                            <integer key="value" value="1"/>
+                            <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="pXc-Pf-Ogr" kind="relationship" relationship="viewControllers" id="uDY-ep-mlD"/>
                         <segue destination="Ynw-ww-xPR" kind="relationship" relationship="viewControllers" id="17c-nb-E75"/>
                         <segue destination="mva-qj-GEe" kind="relationship" relationship="viewControllers" id="Rad-Qs-08L"/>
+                        <segue destination="AE4-rl-1A9" kind="relationship" relationship="viewControllers" id="7W7-G9-FSy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -62,7 +63,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1c-bB-84b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="468"/>
+            <point key="canvasLocation" x="234" y="468"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="BFA-ED-zv5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="AE4-rl-1A9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="bPY-v8-KcV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qjm-de-zkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="468"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
