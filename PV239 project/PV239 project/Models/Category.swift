@@ -38,8 +38,16 @@ enum Category {
     
     var image: UIImage {
         switch self {
+            case .Clothes: return #imageLiteral(resourceName: "ClothesIcon")
+            case .EatingOut: return #imageLiteral(resourceName: "EatingOutIcon")
+            case .Entertainment: return #imageLiteral(resourceName: "EntertainmentIcon")
+            case .Fuel: return #imageLiteral(resourceName: "FuelIcon")
+            case .Kids: return #imageLiteral(resourceName: "KidsIcon")
+            case .Shopping: return #imageLiteral(resourceName: "ShoppingIcon")
+            case .Sport: return #imageLiteral(resourceName: "SportsIcon")
+            case .Travel: return #imageLiteral(resourceName: "TravelIcon")
+            case .Other: return #imageLiteral(resourceName: "SpendingIcon")
             case .None: return #imageLiteral(resourceName: "NoneIcon")
-            default: return #imageLiteral(resourceName: "SpendingIcon")
         }
     }
 }
