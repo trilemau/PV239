@@ -70,6 +70,8 @@ class TransactionDetailTableViewController: UITableViewController, UITextFieldDe
         transaction?.amount = Int(amountField.text!)!
         transaction?.date = datePicker.date
         
+        TransactionsManager.shared.updatetransaction(transaction: transaction)
+        
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -78,6 +80,7 @@ class TransactionDetailTableViewController: UITableViewController, UITextFieldDe
         
         popup.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
             self.controller?.transactions.remove(at: self.row!)
+            TransactionsManager.shared.removeTransaction(transactionId: self.transaction?.id)
             
             self.navigationController?.popToRootViewController(animated: true)
             popup.dismiss(animated: true, completion: nil)
