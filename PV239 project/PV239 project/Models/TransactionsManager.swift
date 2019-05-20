@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class TransactionsManager {
     public static let shared = TransactionsManager()
@@ -32,11 +35,90 @@ class TransactionsManager {
         else {
             self.transactions.append(contentsOf: transactionsToAdd)
         }
+        self.addTransactionsToDatabase(transactionsToAdd: transactionsToAdd)
+        
         return self.transactions
     }
     
-    public func removeTransaction(transactionId: String) -> [Transaction] {
+    public func removeTransaction(transactionId: String?) -> [Transaction]? {
+        if transactionId == nil {
+            return nil
+        }
         self.transactions = self.transactions.filter { $0.id != transactionId }
+        self.removeTransactionFromDatabase(transactionId: transactionId!)
+        
         return self.transactions
+    }
+    
+    public func updatetransaction(transaction: Transaction?) -> Void {
+        if transaction == nil {
+            return
+        }
+        let indexOfTransaction = self.transactions.index(where: { $0.id == transaction!.id })
+        if indexOfTransaction != nil {
+            self.transactions[indexOfTransaction!] = transaction!
+            self.updateTransactionInDatabase(transaction: transaction!)
+        }
+    }
+    
+    private func addTransactionsToDatabase(transactionsToAdd: [Transaction]) -> Void {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        
+        for transaction in transactionsToAdd {
+            db.collection("transactions").addDocument(data: [
+                "id": transaction.id as Any,
+                "transactionType": transaction.transactionType?.description as Any,
+                "category": transaction.category?.description as Any,
+                "amount": transaction.amount as Any,
+                "date": transaction.date as Any,
+                "user_id": userId as Any,
+                ]) { err in
+                    if let err = err {
+                        print("Error while adding document: \(err)")
+                    }
+            }
+        }
+    }
+    
+    private func removeTransactionFromDatabase(transactionId: String) -> Void {
+        let db = Firestore.firestore()
+        
+        db.collection("transactions").whereField("id", isEqualTo: transactionId).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting transactions: \(err)")
+                return
+            }
+            for document in querySnapshot!.documents {
+                db.collection("transactions").document(document.documentID).delete() { error in
+                    if let error = error {
+                        print("Error while deleting transaction: \(error, document.documentID)")
+                    }
+                }
+            }
+        }
+    }
+    
+    private func updateTransactionInDatabase(transaction: Transaction) -> Void {
+        let db = Firestore.firestore()
+        
+        db.collection("transactions").whereField("id", isEqualTo: transaction.id!).getDocuments() { querySnapshot, err in
+            if let err = err {
+                print("Error while getting transaction: \(err)")
+                return
+            }
+            for document in querySnapshot!.documents {
+                db.collection("transactions").document(document.documentID).updateData([
+                    "transactionType": transaction.transactionType?.description as Any,
+                    "category": transaction.category?.description as Any,
+                    "amount": transaction.amount as Any,
+                    "date": transaction.date as Any,
+                ]) { error in
+                    if let error = error {
+                        print("Error while updating transaction: \(error, document.documentID)")
+                    }
+                }
+            }
+        }
     }
 }
