@@ -2,7 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "EmptyIcon40x40.png"
+      "filename" : "EmptyIcon40x40.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Icon-80.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Icon-120.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
