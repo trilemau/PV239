@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		230407D22258F5AF0022705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 230407D12258F5AE0022705D /* GoogleService-Info.plist */; };
+		235A326B229447DC0060C6EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A326A229447DC0060C6EC /* LoginViewController.swift */; };
+		235A326D229456D10060C6EC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A326C229456D10060C6EC /* SignUpViewController.swift */; };
 		236D383C2275DCD1009333F8 /* TransactionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D383B2275DCD1009333F8 /* TransactionsManager.swift */; };
 		237FDCB722748DA6002BA893 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDCB622748DA6002BA893 /* SettingsViewController.swift */; };
 		23DF01A6224BDA3E00164156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01A5224BDA3E00164156 /* AppDelegate.swift */; };
@@ -16,7 +18,6 @@
 		23DF01B2224BDA4200164156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01B0224BDA4200164156 /* LaunchScreen.storyboard */; };
 		23DF01BA224BDEC700164156 /* AnimatedUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */; };
 		23EE3A31225FA34800F25A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EE3A30225FA34800F25A72 /* Main.storyboard */; };
-		23EE3A33225FA76100F25A72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE3A32225FA76100F25A72 /* LoginViewController.swift */; };
 		6C12D18F227E38CA0029E00C /* AddTransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C12D18E227E38CA0029E00C /* AddTransactionTableViewController.swift */; };
 		6C3A0B72227F17C90058A29B /* TransactionDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A0B71227F17C90058A29B /* TransactionDetailTableViewController.swift */; };
 		6C3AE7862290093C00967568 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3AE7852290093C00967568 /* Helper.swift */; };
@@ -30,12 +31,13 @@
 		6C84007F2258FA900029D6AF /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */; };
 		6CB2C25D228F777700CA89DB /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2C25C228F777700CA89DB /* CategoriesTableViewController.swift */; };
 		6CCDC103227F8F830068FB23 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC102227F8F830068FB23 /* TransactionTableViewCell.swift */; };
-		6CEEBBC02291E4BC005826ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEEBBBF2291E4BC005826ED /* Login.storyboard */; };
 		90D36909A1D7E0C1D8F24F96 /* Pods_PV239_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CCCB2CA82F65EDC2203F8C /* Pods_PV239_project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		230407D12258F5AE0022705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		235A326A229447DC0060C6EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		235A326C229456D10060C6EC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		236D383B2275DCD1009333F8 /* TransactionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsManager.swift; sourceTree = "<group>"; };
 		237FDCB622748DA6002BA893 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		23DF01A2224BDA3E00164156 /* PV239 project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PV239 project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +48,6 @@
 		23DF01B3224BDA4200164156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedUITabBarController.swift; sourceTree = "<group>"; };
 		23EE3A30225FA34800F25A72 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		23EE3A32225FA76100F25A72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		413DB36B881C038478387161 /* Pods-PV239 project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PV239 project.release.xcconfig"; path = "Pods/Target Support Files/Pods-PV239 project/Pods-PV239 project.release.xcconfig"; sourceTree = "<group>"; };
 		514327CE16E4EA63DA7EDA5F /* Pods-PV239 project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PV239 project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PV239 project/Pods-PV239 project.debug.xcconfig"; sourceTree = "<group>"; };
 		6C12D18E227E38CA0029E00C /* AddTransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionTableViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		6CB2C25C228F777700CA89DB /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		6CCDC102227F8F830068FB23 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		6CEEBBBF2291E4BC005826ED /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D1CCCB2CA82F65EDC2203F8C /* Pods_PV239_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PV239_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,13 +116,14 @@
 			children = (
 				23DF01B9224BDEC700164156 /* AnimatedUITabBarController.swift */,
 				6C84007E2258FA900029D6AF /* TransactionsTableViewController.swift */,
-				23EE3A32225FA76100F25A72 /* LoginViewController.swift */,
 				237FDCB622748DA6002BA893 /* SettingsViewController.swift */,
 				6C12D18E227E38CA0029E00C /* AddTransactionTableViewController.swift */,
 				6C3A0B71227F17C90058A29B /* TransactionDetailTableViewController.swift */,
 				6CCDC102227F8F830068FB23 /* TransactionTableViewCell.swift */,
 				6CB2C25C228F777700CA89DB /* CategoriesTableViewController.swift */,
 				6C3AE7872290539000967568 /* TransactionTypeTableViewController.swift */,
+				235A326A229447DC0060C6EC /* LoginViewController.swift */,
+				235A326C229456D10060C6EC /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 				6C602C842258EB1B00DD81C1 /* Report.storyboard */,
 				6C602C862258EC0E00DD81C1 /* Settings.storyboard */,
 				23EE3A30225FA34800F25A72 /* Main.storyboard */,
-				6CEEBBBF2291E4BC005826ED /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,7 +238,6 @@
 				6C602C872258EC0E00DD81C1 /* Settings.storyboard in Resources */,
 				6C602C832258EA0F00DD81C1 /* Transactions.storyboard in Resources */,
 				6C602C852258EB1B00DD81C1 /* Report.storyboard in Resources */,
-				6CEEBBC02291E4BC005826ED /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +332,12 @@
 				6C3AE7862290093C00967568 /* Helper.swift in Sources */,
 				236D383C2275DCD1009333F8 /* TransactionsManager.swift in Sources */,
 				237FDCB722748DA6002BA893 /* SettingsViewController.swift in Sources */,
-				23EE3A33225FA76100F25A72 /* LoginViewController.swift in Sources */,
 				6C84007F2258FA900029D6AF /* TransactionsTableViewController.swift in Sources */,
 				6C3AE7882290539000967568 /* TransactionTypeTableViewController.swift in Sources */,
 				6C12D18F227E38CA0029E00C /* AddTransactionTableViewController.swift in Sources */,
+				235A326B229447DC0060C6EC /* LoginViewController.swift in Sources */,
 				6C5559F8225945DD00B2D89F /* Category.swift in Sources */,
+				235A326D229456D10060C6EC /* SignUpViewController.swift in Sources */,
 				23DF01BA224BDEC700164156 /* AnimatedUITabBarController.swift in Sources */,
 				6C5559F622593C4300B2D89F /* Transaction.swift in Sources */,
 				6CCDC103227F8F830068FB23 /* TransactionTableViewCell.swift in Sources */,

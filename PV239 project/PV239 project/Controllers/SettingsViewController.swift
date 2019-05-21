@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
         do {
             try authUI?.signOut()
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginViewController = storyBoard.instantiateInitialViewController() as! LoginViewController
+            let loginViewController = storyBoard.instantiateInitialViewController() as! UINavigationController
             self.present(loginViewController, animated: true, completion: nil)
         }
         catch {
