@@ -162,10 +162,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="" id="psi-zL-fYe">
+                            <tableViewSection headerTitle="Graph" id="psi-zL-fYe">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="300" id="Jp7-UA-uMf">
-                                        <rect key="frame" x="0.0" y="364" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="384" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jp7-UA-uMf" id="8fh-54-S4O">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299.66666666666669"/>
