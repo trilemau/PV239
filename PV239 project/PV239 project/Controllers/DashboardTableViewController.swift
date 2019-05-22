@@ -32,8 +32,6 @@ class DashboardTableViewController: UITableViewController {
         super.viewDidLoad()
         
         segment = segmentControl.selectedSegmentIndex
-        
-        updateView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -151,9 +149,10 @@ class DashboardTableViewController: UITableViewController {
         formatter.numberStyle = .percent
         formatter.maximumFractionDigits = 2
         formatter.multiplier = 1
-    chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+        chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
         
         pieChart.data = chartData
+        pieChart.animate(yAxisDuration: 1, easingOption: ChartEasingOption.easeInOutCirc)
         pieChart.legend.enabled = false
         pieChart.usePercentValuesEnabled = true
     }
