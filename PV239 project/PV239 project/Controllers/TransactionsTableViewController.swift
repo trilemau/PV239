@@ -68,10 +68,10 @@ class TransactionsTableViewController: UITableViewController {
         switch transaction.transactionType! {
         case TransactionType.Income:
             sign = "+"
-            cell.amountLabel.textColor = UIColor(red: 79/255, green: 143/255, blue: 0, alpha: 1)
+            cell.amountLabel.textColor = UIColor(named: "IncomeColor")
         case TransactionType.Expense:
             sign = "-"
-            cell.amountLabel.textColor = UIColor(red: 1, green: 40/255, blue: 0, alpha: 1)
+            cell.amountLabel.textColor = UIColor(named: "ExpenseColor")
         default:
             cell.amountLabel.textColor = UIColor.black
         }
