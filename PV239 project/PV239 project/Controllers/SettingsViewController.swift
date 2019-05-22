@@ -24,28 +24,29 @@ class SettingsViewController: UIViewController {
     }
     
     
-    @IBAction func logout(_ sender: UIButton) {
-        let authUI = FUIAuth.defaultAuthUI()
+    @IBAction func logoutButtonClicked(_ sender: UIButton) {
+        let popup = UIAlertController(title: "Logout", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.alert)
         
-        do {
-            try authUI?.signOut()
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginViewController = storyBoard.instantiateInitialViewController() as! UINavigationController
-            self.present(loginViewController, animated: true, completion: nil)
-        }
-        catch {
-            print("Error in logout: \(error)")
-        }
+        popup.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            let authUI = FUIAuth.defaultAuthUI()
+            
+            do {
+                try authUI?.signOut()
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = storyBoard.instantiateInitialViewController() as! UINavigationController
+                self.present(loginViewController, animated: true, completion: nil)
+            }
+            catch {
+                print("Error in logout: \(error)")
+            }
+            popup.dismiss(animated: true, completion: nil)
+        }))
+        
+        popup.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            popup.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(popup, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

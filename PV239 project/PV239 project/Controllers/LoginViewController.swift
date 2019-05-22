@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         checkLoggedIn()
+        self.hideKeyboardWhenTappedAround()
     }
     
     private func checkLoggedIn() {

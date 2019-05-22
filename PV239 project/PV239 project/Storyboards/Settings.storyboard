@@ -38,29 +38,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1o-oV-OWT">
-                                <rect key="frame" x="163.66666666666666" y="321" width="48" height="30"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="1" green="0.22497355192281898" blue="0.16240626834450977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="logout:" destination="9Ds-sr-Zer" eventType="touchUpInside" id="jWv-K8-hXg"/>
-                                    <action selector="logout:" destination="Vz9-vX-YDn" eventType="touchUpInside" id="nig-FH-4sF"/>
-                                </connections>
-                            </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-mz-WPu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI0-eE-nwS">
+                                <rect key="frame" x="23" y="507" width="329" height="50"/>
+                                <color key="backgroundColor" red="0.93993026020000003" green="0.59870976210000004" blue="0.21552559730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xYE-7D-iin"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonClicked:" destination="9Ds-sr-Zer" eventType="touchUpInside" id="MlC-2V-lfI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hGQ-mz-WPu" firstAttribute="top" secondItem="pKb-0i-sat" secondAttribute="top" id="9js-Fb-xOR"/>
-                            <constraint firstItem="G1o-oV-OWT" firstAttribute="centerX" secondItem="gi7-GA-f0y" secondAttribute="centerX" constant="20" id="D3x-8f-u8v"/>
-                            <constraint firstItem="G1o-oV-OWT" firstAttribute="centerY" secondItem="gi7-GA-f0y" secondAttribute="centerY" id="Elb-CN-n7C"/>
+                            <constraint firstItem="pKb-0i-sat" firstAttribute="bottom" secondItem="AI0-eE-nwS" secondAttribute="bottom" constant="32" id="HIs-7M-t5e"/>
                             <constraint firstItem="hGQ-mz-WPu" firstAttribute="leading" secondItem="gi7-GA-f0y" secondAttribute="leading" id="LIL-Si-TnL"/>
-                            <constraint firstItem="G1o-oV-OWT" firstAttribute="centerX" secondItem="gi7-GA-f0y" secondAttribute="centerX" id="ex7-aF-Uwe"/>
                             <constraint firstAttribute="trailing" secondItem="hGQ-mz-WPu" secondAttribute="trailing" id="k6c-oj-rpX"/>
-                            <constraint firstItem="G1o-oV-OWT" firstAttribute="centerY" secondItem="gi7-GA-f0y" secondAttribute="centerY" id="rgt-Ke-iVI"/>
+                            <constraint firstItem="AI0-eE-nwS" firstAttribute="leading" secondItem="pKb-0i-sat" secondAttribute="leading" constant="23" id="lci-ay-Ni9"/>
+                            <constraint firstItem="pKb-0i-sat" firstAttribute="trailing" secondItem="AI0-eE-nwS" secondAttribute="trailing" constant="23" id="myD-2R-Vwv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pKb-0i-sat"/>
                     </view>
@@ -69,7 +72,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWm-aw-VKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Vz9-vX-YDn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1466.4000000000001" y="-150"/>
         </scene>
