@@ -29,7 +29,7 @@ class AddTransactionTableViewController: UITableViewController, UITextFieldDeleg
         self.hideKeyboardWhenTappedAround()
         amountField.delegate = self
         
-        datePicker.maximumDate = Date(timeIntervalSinceNow: 0)
+        datePicker.maximumDate = Date()
         
         transactionImage.image = transactionType.image
         categoryImage.image = category.image

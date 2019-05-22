@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController id="hUR-pg-a7g" customClass="DashboardTableViewController" customModule="PV239_project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="DMb-Ai-JVW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="tyM-Kg-2r0">
@@ -36,9 +36,12 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <segments>
                                                         <segment title="All-time"/>
-                                                        <segment title="Monthly"/>
-                                                        <segment title="Daily"/>
+                                                        <segment title="This Month"/>
+                                                        <segment title="Today"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="segmentControlClicked:" destination="hUR-pg-a7g" eventType="valueChanged" id="REF-Tc-Yzs"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -188,8 +191,12 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="SFx-Gw-d3l"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="balanceField" destination="1Qp-b9-JFB" id="Rqf-7E-mM5"/>
                         <outlet property="balanceIcon" destination="PYh-FC-rTV" id="Z3L-kc-vMw"/>
+                        <outlet property="expenseField" destination="LyZ-UN-oOS" id="mIt-4T-7rh"/>
+                        <outlet property="incomeField" destination="H70-Ze-9Gf" id="3lb-yc-gr9"/>
                         <outlet property="pieChart" destination="LXu-pe-rpZ" id="FqM-vN-zEa"/>
+                        <outlet property="segmentControl" destination="HaR-gk-H9E" id="SGN-1k-vVn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcI-jy-YxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

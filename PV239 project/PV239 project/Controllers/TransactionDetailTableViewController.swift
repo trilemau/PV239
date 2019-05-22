@@ -41,7 +41,7 @@ class TransactionDetailTableViewController: UITableViewController, UITextFieldDe
         self.hideKeyboardWhenTappedAround()
         amountField.delegate = self
         
-        datePicker.maximumDate = Date(timeIntervalSinceNow: 0)
+        datePicker.maximumDate = Date()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
